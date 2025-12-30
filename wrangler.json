@@ -1,0 +1,16 @@
+{
+  "$schema": "https://unpkg.com/wrangler@latest/config-schema.json",
+  "name": "dashboard-for-github",
+  "main": "worker.ts",
+  "compatibility_date": "2025-12-30",
+  "observability": { "logs": { "enabled": true } },
+  "routes": [{ "pattern": "dashboard.forgithub.com", "custom_domain": true }],
+  "durable_objects": {
+    "bindings": [{ "name": "DashboardDO", "class_name": "DashboardDO" }]
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["DashboardDO"] }],
+  "triggers": { "crons": ["0 2 * * *"] },
+  "kv_namespaces": [
+    { "binding": "DASHBOARD_KV", "id": "1af14d43335446d3952c15b1a232c643" }
+  ]
+}
