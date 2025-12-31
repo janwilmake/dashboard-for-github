@@ -24,7 +24,6 @@ const DO_NAME = "global1";
 // ============================================================================
 // HTML Templates
 // ============================================================================
-
 function getLandingPageHTML(): string {
   return `<!DOCTYPE html>
 <html lang="en">
@@ -114,7 +113,7 @@ function getLandingPageHTML(): string {
     }
     .hero {
       text-align: center;
-      padding: 80px 32px;
+      padding: 80px 32px 40px;
       max-width: 900px;
       margin: 0 auto;
     }
@@ -131,6 +130,10 @@ function getLandingPageHTML(): string {
       max-width: 600px;
       margin-left: auto;
       margin-right: auto;
+    }
+    .twitter-widget {
+      max-width: 550px;
+      margin: 48px auto;
     }
     .features {
       display: grid;
@@ -208,8 +211,7 @@ function getLandingPageHTML(): string {
 
   <main>
     <section class="hero">
-      <h1>Your GitHub PRs,<br>at a glance</h1>
-      <p>See all your open pull requests and review requests in one fast, beautiful dashboard. Updated nightly.</p>
+      <h1>A better GitHub homepage</h1>
       <a href="/login" class="btn btn-primary" style="font-size: 16px; padding: 14px 28px;">
         Get Started
       </a>
@@ -241,18 +243,14 @@ function getLandingPageHTML(): string {
           </svg>
           All Your Repos
         </h3>
-        <p>Quick access to all your repositories, sorted by recent activity.</p>
-      </div>
-      <div class="feature">
-        <h3>
-          <svg width="20" height="20" viewBox="0 0 16 16" fill="var(--color-success)">
-            <path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0ZM7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.248.248 0 0 0-.25 0ZM2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"></path>
-          </svg>
-          Lightning Fast
-        </h3>
-        <p>Pre-rendered dashboard loads instantly. No waiting for API calls.</p>
+        <p>Quick access to all your repositories.</p>
       </div>
     </section>
+
+    <div class="twitter-widget">
+      <blockquote class="twitter-tweet" data-theme="dark"><p lang="en" dir="ltr">I made a better GitHub homepage<br><br>It shows you all your open PRs and PRs that need your review in a single place<br><br>Check it out at <a href="https://t.co/9QqYxKZE8Y">https://t.co/9QqYxKZE8Y</a> <a href="https://t.co/AbQJ0fEZpX">pic.twitter.com/AbQJ0fEZpX</a></p>&mdash; Rhys (@RhysSullivan) <a href="https://twitter.com/RhysSullivan/status/1918486708565492170?ref_src=twsrc%5Etfw">January 30, 2025</a></blockquote>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
 
     <section class="pricing">
       <h2>Simple Pricing</h2>
